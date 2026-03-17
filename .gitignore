@@ -1,0 +1,42 @@
+# 依存関係
+node_modules
+
+# ビルド結果
+dist/
+.vite_dev
+
+# ログファイル
+*.log
+
+# OS固有
+.DS_Store
+Thumbs.db
+
+# エディタ設定
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+
+# Claude Code一時ファイル
+tmpclaude-*-cwd
+
+# ドキュメント（個人用）
+docs/
+
+# 環境変数
+.env
+.env.local
+.env.*.local
+
+# 自動生成ファイル（config/pages/*.json から自動構築）
+config/pages.js
+
+# 自動生成ファイル（vite-plugin-scss-index により自動生成・watchTargets対象のみ）
+src/assets/scss/foundation/_index.scss
+src/assets/scss/layout/_index.scss
+src/assets/scss/object/component/_index.scss
+src/assets/scss/object/project/_index.scss
+src/assets/scss/object/utility/_index.scss

@@ -1,0 +1,11 @@
+@use "sass:math";
+@use "sass:map";
+@use 'variables'as *;
+
+
+// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+  @media #{map.get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}

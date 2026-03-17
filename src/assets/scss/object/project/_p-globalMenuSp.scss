@@ -1,0 +1,93 @@
+@use "foundation"as *;
+
+/* drawer */
+body.is-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+nav.p-globalmenusp {
+  display: none;
+}
+
+/* g-sub-set: SP時のみJSで付与し、表示を制御（ちらつき対策） */
+nav.p-globalmenusp.g-sub-set {
+  @include mq("md") {
+    display: block;
+    position: fixed;
+    z-index: 1500;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: all 0.6s ease-out;
+    width: 100%;
+    height: 100dvh;
+    overflow-y: scroll;
+    background-color: #3f3f3f;
+    padding: rem(55) rem(45) rem(42);
+  }
+}
+
+/* このクラスを、jQueryで付与・削除する */
+nav.p-globalmenusp.g-sub-set.is-open {
+  @include mq("md") {
+    transform: translateX(0%);
+  }
+}
+
+
+nav.p-globalmenusp.g-sub-set .p-globalmenusp__container {
+  @include mq("md") {
+    position: relative;
+    z-index: 1;
+    width: min(100%, rem(285));
+    margin-inline: auto;
+  }
+}
+
+nav.p-globalmenusp.g-sub-set .p-globalmenusp__logo {
+  @include mq("md") {
+    width: min(100%, rem(273));
+    display: inline-block;
+    margin-left: rem(7);
+  }
+
+  img {
+    @include mq("md") {
+      aspect-ratio: 273/45;
+      object-fit: contain;
+      height: auto;
+      width: 100%;
+    }
+  }
+}
+
+nav.p-globalmenusp.g-sub-set .p-globalmenusp__list {
+  @include mq("md") {
+    margin-top: rem(13);
+  }
+}
+
+.p-globalmenusp__item {
+  display: block;
+}
+
+nav.p-globalmenusp.g-sub-set .p-globalmenusp__trigger {
+  @include mq("md") {
+    display: block;
+    padding-block: rem(12);
+    font-size: rem(20);
+    font-weight: $bold;
+    color: $white;
+    letter-spacing: -0.03em;
+  }
+}
+
+nav.p-globalmenusp.g-sub-set .p-globalmenusp__btn-wrap {
+  @include mq("md") {
+    margin-top: rem(38);
+    display: flex;
+    justify-content: center;
+  }
+}

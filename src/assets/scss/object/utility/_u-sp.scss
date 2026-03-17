@@ -1,0 +1,9 @@
+@use "foundation"as *;
+
+.u-sp {
+  display: none;
+
+  @include mq("md") {
+    display: block;
+  }
+}

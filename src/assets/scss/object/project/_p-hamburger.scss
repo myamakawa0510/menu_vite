@@ -1,0 +1,82 @@
+@use "foundation"as *;
+
+/* ハンバーガーメニュー */
+.p-hamburger {
+  display: none;
+}
+
+/* g-sub-set: SP時のみJSで付与し、表示を制御（ちらつき対策） */
+.p-hamburger.g-sub-set {
+  @include mq("md") {
+    display: block;
+    width: rem(67);
+    height: rem(62);
+    border: none;
+    pointer-events: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: transparent;
+    z-index: 3000;
+  }
+}
+
+.p-hamburger.g-sub-set .p-hamburger__line {
+  @include mq("md") {
+    position: absolute;
+    content: '';
+    border-radius: 100vh;
+    height: 1px;
+    background: $white;
+    transition: 0.3s ease-out;
+    right: rem(20);
+    width: rem(34);
+  }
+
+  &:nth-of-type(1) {
+    top: rem(15);
+  }
+
+  &:nth-of-type(2) {
+    top: rem(27);
+  }
+
+  &:nth-of-type(3) {
+    top: rem(39);
+  }
+}
+
+.p-hamburger.is-open {
+  .p-hamburger__line {
+    background: $white;
+
+    &:nth-of-type(1) {
+      transform: rotate(315deg);
+      top: rem(27);
+
+    }
+
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+
+    &:nth-of-type(3) {
+      transform: rotate(-315deg);
+      top: rem(27);
+    }
+  }
+}
+
+/* トップページ以外のSP: ハンバーガーのバーを黒に（閉じているとき） */
+body.is-sub .p-hamburger.g-sub-set .p-hamburger__line {
+  @include mq("md") {
+    background: $black;
+  }
+}
+
+/* ドロワーを開いたときはバーを白に */
+body.is-sub .p-hamburger.is-open .p-hamburger__line {
+  @include mq("md") {
+    background: $white;
+  }
+}

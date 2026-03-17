@@ -1,0 +1,7 @@
+@use "foundation"as *;
+
+.u-pc {
+  @include mq("md") {
+    display: none;
+  }
+}

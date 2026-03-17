@@ -1,0 +1,20 @@
+{
+  "html": {
+    "wrap_line_length": 0,
+    "indent_size": 4,
+    "max_preserve_newlines": 2
+  },
+  "php": {
+    "wrap_line_length": 0,
+    "indent_size": 4,
+    "max_preserve_newlines": 2
+  },
+  "js": {
+    "indent_size": 4,
+    "brace_style": "none",
+    "break_chained_methods": false
+  },
+  "css": {
+    "indent_size": 2
+  }
+}

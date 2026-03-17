@@ -1,0 +1,163 @@
+@use "sass:math";
+@use "sass:map";
+@use 'functions'as *;
+
+////////////////////
+// インナー幅設定
+////////////////////
+/// 
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1300px;
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 20px;
+
+
+////////////////////
+//ブレイクポイントとメディアクエリー 
+////////////////////
+
+//ブレイクポイント
+$breakpoints: (sm: 375,
+  md: 767,
+  lg: 1200,
+  xl: 1440,
+);
+
+//メディアクエリー
+$mediaquerys: (sm: "screen and (max-width: #{map.get($breakpoints,'sm')}px)",
+  md: "screen and (max-width: #{map.get($breakpoints,'md')}px)",
+  lg: "screen and (max-width: #{map.get($breakpoints,'lg')}px)",
+  pc: "screen and (max-width: #{$inner})",
+  xl: "screen and (max-width: #{map.get($breakpoints,'xl')}px)",
+);
+
+////////////////////
+// フォント設定
+////////////////////
+// フォント
+// $base-font-familyと同じ
+// $sans-serif: 'Noto Sans JP',
+// sans-serif;
+
+// $second-font-familyと同じ
+// $font-english: 'Lato',
+// sans-serif;
+
+// $third-font-familyと同じ
+// $sans-serif02: 'Zen Kaku Gothic New',
+// sans-serif;
+
+
+//フォントを変数に入れる
+$base-font-family:"Noto Sans JP",
+sans-serif;
+$second-font-family: "Bebas Neue",
+sans-serif;
+$third-font-family: "Poppins",
+sans-serif;
+$fourth-font-family: "Oswald",
+sans-serif;
+
+
+// フォントウェイト
+$thin: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 900;
+
+//サブセットを使う場合はここに記載
+// @font-face {
+//   font-family: "Zen Kaku Gothic New";@forward 'reset'; 
+//   font-style: normal;
+//   font-weight: 500;
+//   src: url("../fonts/medium.woff") format("woff");
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: "Zen Kaku Gothic New";
+//   font-style: normal;
+//   font-weight: 700;
+//   src: url("../fonts/bold.woff") format("woff");
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: "Zen Kaku Gothic New";
+//   font-style: normal;
+//   font-weight: 900;
+//   src: url("../fonts/black.woff") format("woff");
+//   font-display: swap;
+// }
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定
+$text: #000000;
+$black: #000000;
+$white: #fff;
+$theme:#44b063;
+$gray1: #E8E7E4;
+$gray2: #F1F1F1;
+$accent: #c9a453;
+$green: #06C755;
+$gradient1: linear-gradient(270deg, #4CA7E3 0%, #00488D 100%);
+$gradient2:linear-gradient(270deg, #47B6EF 0%, #0F77BD 100%);
+$gradient3: linear-gradient(286deg, #B93F2A 37.75%, #CD533B 95.73%);
+$base: #F3F2EF;
+
+////////////////////
+// line-heightとletter-spacing
+////////////////////
+
+$line-height-base:1.5;
+$line-height-heading:1.2;
+$letter-spacing-base:0.02em;
+$letter-spacing-heading:0.05em;
+
+
+////////////////////
+// 余白
+////////////////////
+
+$space-xs: rem(10);
+$space-sm: rem(20);
+$space-md: rem(30);
+$space-lg: rem(50);
+$space-xl: rem(100);
+
+
+////////////////////
+// ボーターの設定
+////////////////////
+
+$border-radius: rem(8);
+$border-width: 1px;
+$border-color: $gray1;
+
+
+
+////////////////////
+// box-shadowの指定
+////////////////////
+
+$box: 6px 6px 16px rgba($color: #000000, $alpha: 0.16);
+
+
+////////////////////
+// z-index
+////////////////////
+
+$layer: (modal: 100,
+  drawer: 50,
+  hamburger: 40,
+  spNav: 35,
+  toTop: 30,
+  header: 20,
+  default: 1);
