@@ -377,3 +377,46 @@ fadeIns.forEach((fadeIn) => {
         },
     );
 });
+
+// FAQ アコーディオン
+document.querySelectorAll(".p-scratch-faq__item").forEach((details) => {
+    const summary = details.querySelector(".p-scratch-faq__trigger");
+    const content = details.querySelector(".p-scratch-faq__content");
+    let isAnimating = false;
+
+    summary.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (isAnimating) return;
+        isAnimating = true;
+
+        if (details.open) {
+            const startHeight = content.offsetHeight;
+            content.style.height = startHeight + "px";
+            requestAnimationFrame(() => {
+                content.style.transition = "height 0.3s ease";
+                content.style.height = "0px";
+                content.addEventListener("transitionend", function handler() {
+                    content.removeEventListener("transitionend", handler);
+                    details.open = false;
+                    content.style.height = "";
+                    content.style.transition = "";
+                    isAnimating = false;
+                });
+            });
+        } else {
+            details.open = true;
+            const endHeight = content.offsetHeight;
+            content.style.height = "0px";
+            requestAnimationFrame(() => {
+                content.style.transition = "height 0.3s ease";
+                content.style.height = endHeight + "px";
+                content.addEventListener("transitionend", function handler() {
+                    content.removeEventListener("transitionend", handler);
+                    content.style.height = "";
+                    content.style.transition = "";
+                    isAnimating = false;
+                });
+            });
+        }
+    });
+});

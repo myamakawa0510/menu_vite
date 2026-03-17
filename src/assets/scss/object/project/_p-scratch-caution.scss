@@ -1,0 +1,58 @@
+@use "foundation"as *;
+
+.p-scratch-caution {
+  background-color: #f9fafb;
+  padding-block: rem(30);
+
+  @include mq("md") {
+    padding-block: rem(40);
+  }
+}
+
+.p-scratch-caution__headline {
+  margin-top: 0;
+}
+
+.p-scratch-caution__list {
+  margin-top: rem(16);
+  padding: 0;
+  list-style: none;
+
+  @include mq("md") {
+    margin-top: rem(20);
+  }
+}
+
+.p-scratch-caution__item {
+  margin-top: rem(4);
+  display: flex;
+  gap: rem(8);
+  align-items: flex-start;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.p-scratch-caution__item-mark {
+  flex-shrink: 0;
+  font-size: rem(14);
+  font-weight: $regular;
+  color: #3d0e01;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  font-family: $base-font-family;
+}
+
+.p-scratch-caution__item-text {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  font-size: rem(14);
+  font-weight: $regular;
+  color: #3d0e01;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  font-family: $base-font-family;
+  font-feature-settings: "palt";
+}

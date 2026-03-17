@@ -33,7 +33,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     {{#unless isDev}}
         <!-- js -->
@@ -72,49 +72,17 @@
     <header class="p-header">
         <div class="p-header__inner">
             <a href="/" class="p-header__logo">
-                <img src="/assets/img/logo01@2x.png" alt="フレイアクリニック メンズ医療脱毛のロゴ" loading="lazy" decoding="async" width="161" height="41">
-                <img src="/assets/img/logo_white01@2x.png" alt="フレイアクリニック メンズ医療脱毛のロゴ" loading="lazy" decoding="async" width="161" height="41">
+                <img src="/assets/img/logo01.svg" alt="赤と緑の台形を組み合わせたロゴとmenuのテキスト" loading="lazy" decoding="async" width="72" height="20">
             </a>
-            <nav class="p-header__nav">
-                <ul class="p-header__list">
-                    <li class="p-header__item">
-                        <a href="/guide.html" class="p-header__link"><span class="p-header__linktext">はじめての方へ</span></a>
-                    </li>
-                    <li class="p-header__item">
-                        <a href="/free-counseling.html" class="p-header__link"><span class="p-header__linktext">無料カウンセリングとは</span></a>
-                    </li>
-                    <li class="p-header__item">
-                        <a href="/menu.html" class="p-header__link"><span class="p-header__linktext">脱毛メニューと料金</span></a>
-                    </li>
-                    <li class="p-header__item">
-                        <a href="/machine.html" class="p-header__link"><span class="p-header__linktext">脱毛機器紹介</span></a>
-                    </li>
-                    <li class="p-header__item">
-                        <a href="/faq.html" class="p-header__link">
-                            <span class="p-header__linktext">よくある質問</span>
-                        </a>
-                    </li>
-                    <li class="p-header__item">
-                        <a href="/clinic.html" class="p-header__link">
-                            <span class="p-header__linktext">クリニック一覧</span>
-                        </a>
-                    </li>
-                </ul>
-                <div class="p-header__btn">
-                    <a href="" class="c-btn01">
-                        <span class="c-btn01__icon"></span>
-                        <span class="c-btn01__text">無料カウンセリング予約</span>
-                    </a>
-                </div>
-            </nav>
         </div>
+        <div class="p-header__border"></div>
     </header>
 
-    <div class="p-hamburger">
+    <button type="button" class="p-hamburger" aria-label="メニューを開く">
         <span class="p-hamburger__line"></span>
         <span class="p-hamburger__line"></span>
         <span class="p-hamburger__line"></span>
-    </div>
+    </button>
 
     <!-- drawer -->
     <nav class="p-globalmenusp">

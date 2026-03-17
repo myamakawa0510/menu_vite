@@ -19,46 +19,26 @@ $padding-sp: 20px;
 ////////////////////
 
 //ブレイクポイント
-$breakpoints: (sm: 375,
-  md: 767,
-  lg: 1200,
-  xl: 1440,
+$breakpoints: (
+  md:  601,
+  lg:  1024,
+  xl:  1200,
+  pc:  1300,
+  xxl: 1440,
 );
 
-//メディアクエリー
-$mediaquerys: (sm: "screen and (max-width: #{map.get($breakpoints,'sm')}px)",
-  md: "screen and (max-width: #{map.get($breakpoints,'md')}px)",
-  lg: "screen and (max-width: #{map.get($breakpoints,'lg')}px)",
-  pc: "screen and (max-width: #{$inner})",
-  xl: "screen and (max-width: #{map.get($breakpoints,'xl')}px)",
+//メディアクエリー（SP First: すべて min-width）
+$mediaquerys: (
+  md:  "screen and (min-width: #{map.get($breakpoints,'md')}px)",
+  lg:  "screen and (min-width: #{map.get($breakpoints,'lg')}px)",
+  xl:  "screen and (min-width: #{map.get($breakpoints,'xl')}px)",
+  pc:  "screen and (min-width: #{$inner})",
+  xxl: "screen and (min-width: #{map.get($breakpoints,'xxl')}px)",
 );
 
 ////////////////////
-// フォント設定
+// フォント・カラー設定（Figmaより）CSS変数
 ////////////////////
-// フォント
-// $base-font-familyと同じ
-// $sans-serif: 'Noto Sans JP',
-// sans-serif;
-
-// $second-font-familyと同じ
-// $font-english: 'Lato',
-// sans-serif;
-
-// $third-font-familyと同じ
-// $sans-serif02: 'Zen Kaku Gothic New',
-// sans-serif;
-
-
-//フォントを変数に入れる
-$base-font-family:"Noto Sans JP",
-sans-serif;
-$second-font-family: "Bebas Neue",
-sans-serif;
-$third-font-family: "Poppins",
-sans-serif;
-$fourth-font-family: "Oswald",
-sans-serif;
 
 
 // フォントウェイト
@@ -68,6 +48,17 @@ $medium: 500;
 $semi-bold: 600;
 $bold: 700;
 $extra-bold: 900;
+
+// カラー（SCSS用）
+$text: #000000;
+$black: #000000;
+$white: #ffffff;
+$theme: #43C66F;
+$accent: #c9a453;
+$accent-secondary: #e61e0a;
+$gray1: #E8E7E4;
+$gray2: #F1F1F1;
+$base-font-family: "Noto Sans JP", sans-serif;
 
 //サブセットを使う場合はここに記載
 // @font-face {
@@ -94,23 +85,28 @@ $extra-bold: 900;
 //   font-display: swap;
 // }
 
-////////////////////
-// 色の指定
-////////////////////
+:root {
+  // フォント
+  --base-font-family: "Noto Sans JP",
+    sans-serif;
+  --second-font-family: "Roboto",
+    sans-serif;
+  // --second-font-family: "Ro GSan Serif StdN", "Yu Gothic", "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  // --third-font-family: "Ro GSan Serif Std", "Yu Gothic", "游ゴシック", YuGothic, sans-serif;
 
-//色指定
-$text: #000000;
-$black: #000000;
-$white: #fff;
-$theme:#44b063;
-$gray1: #E8E7E4;
-$gray2: #F1F1F1;
-$accent: #c9a453;
-$green: #06C755;
-$gradient1: linear-gradient(270deg, #4CA7E3 0%, #00488D 100%);
-$gradient2:linear-gradient(270deg, #47B6EF 0%, #0F77BD 100%);
-$gradient3: linear-gradient(286deg, #B93F2A 37.75%, #CD533B 95.73%);
-$base: #F3F2EF;
+  // カラー（Figma変数より）
+  --text: #000000;
+  --black: #000000;
+  --white: #ffffff;
+  --theme: #43C66F;
+  --accent: #c9a453;
+  --accent-secondary: #e61e0a;
+  --border-tertiary: #e2e2e2;
+  --gray1: #E8E7E4;
+  --gray2: #F1F1F1;
+  --green: #06C755;
+  --base: #F3F2EF;
+}
 
 ////////////////////
 // line-heightとletter-spacing

@@ -1,7 +1,9 @@
 @use "foundation"as *;
 
 .u-pc {
+  display: none; // SP: 非表示
+
   @include mq("md") {
-    display: none;
+    display: block; // tablet〜: 表示
   }
 }

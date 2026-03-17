@@ -2,193 +2,31 @@
 
 /* p-header */
 .p-header {
-  z-index: 1000;
-  width: 100%;
-  margin-inline: auto;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  transition: 0.3s ease-in-out;
-  height: rem(117);
-  background: $white;
-  opacity: 1;
-
-  @include mq("md") {
-    top: 0;
-    padding-block: rem(0);
-    height: rem(55);
-    background: $theme;
-  }
-}
-
-/* トップページ以外のSP: 白背景・黒ロゴ */
-body.is-sub .p-header {
-  @include mq("md") {
-    background: $white;
-  }
-}
-
-body.is-sub .p-header__logo {
-  @include mq("md") {
-    img {
-      &:nth-of-type(1) {
-        opacity: 1;
-        visibility: visible;
-      }
-
-      &:nth-of-type(2) {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-  }
+  z-index: 20;
+  width: 100%;
+  background: var(--white);
 }
 
 .p-header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: rem(36) rem(22);
-  width: min(100%, rem(1440));
+  padding: rem(16) rem(14);
   margin-inline: auto;
-  height: inherit;
-
-  @include mq("md") {
-    padding-inline: rem(20);
-    width: 100%;
-  }
 }
 
 .p-header__logo {
-  width: fit-content;
-  display: inline-block;
-  transition: 0.3s ease-out;
-  width: min(100%, rem(317));
-  flex-shrink: 1;
-  position: relative;
-  height: inherit;
-  display: grid;
-  place-items: center;
-  position: relative;
-
-  @include mq("md") {
-    width: min(100%, rem(205));
-  }
+  display: block;
+  width: min(100%, rem(72));
 
   img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    height: inherit;
-    aspect-ratio: 317/53;
-    object-fit: contain;
-    height: auto;
+    aspect-ratio: 72/19.5;
     width: 100%;
-    transition: 0.3s ease-out;
-
-    @include mq("md") {
-      aspect-ratio: 205/34;
-    }
-
-    &:nth-of-type(1) {
-      opacity: 1;
-      visibility: visible;
-
-      @include mq("md") {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-
-    &:nth-of-type(2) {
-      opacity: 0;
-      visibility: hidden;
-
-      @include mq("md") {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
-  }
-}
-
-.p-header__nav {
-  display: flex;
-  align-items: center;
-  gap: rem(10);
-  height: inherit;
-  flex-grow: 1;
-  flex-shrink: 0;
-  justify-content: flex-end;
-  margin-left: rem(10);
-}
-
-.p-header__list {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: inherit;
-
-  @include mq("md") {
-    display: none;
-  }
-}
-
-
-.p-header__item {
-  height: inherit;
-}
-
-.p-header__link {
-  position: relative;
-  height: inherit;
-  transition: 0.5s;
-  transition: 0.3s ease-out;
-  display: grid;
-  place-items: center;
-  padding-inline: rem(7.5);
-  // white-space: nowrap;
-}
-
-.p-header__linktext {
-  font-size: rem(16);
-  font-weight: $medium;
-  letter-spacing: -.05em;
-  line-height: 2.06;
-  display: block;
-  white-space: nowrap;
-  background-image: linear-gradient(90deg, black, black);
-  background-position: left bottom;
-  transition: background-size 0.3s ease-out;
-  background-size: 0 1px;
-  background-repeat: no-repeat;
-}
-
-
-.c-hover-run:hover {
-  background-size: 100% 1px;
-
-}
-
-.p-header__btn {
-  width: min(100%, rem(237));
-  margin-top: rem(6);
-
-  @include mq("md") {
-    display: none;
-  }
-}
-
-@media (any-hover: hover) {
-  .p-header__link:hover {
-    .p-header__linktext {
-      background-size: 100% 1px;
-    }
-  }
-
-  .p-header__logo:hover {
-    opacity: 0.7;
+    height: auto;
+    object-fit: contain;
   }
 }

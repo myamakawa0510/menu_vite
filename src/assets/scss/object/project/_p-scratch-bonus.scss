@@ -1,0 +1,72 @@
+@use "foundation"as *;
+
+.p-scratch-bonus {
+  padding-block: rem(28) rem(40);
+}
+
+.p-scratch-bonus__headline {}
+
+.p-scratch-bonus__card {
+  margin-top: rem(16);
+}
+
+.p-scratch-bonus__card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  align-items: center;
+  background-color: var(--white);
+  padding: rem(16) rem(16) rem(22);
+  border-radius: rem(10);
+  box-shadow: 0 rem(3) rem(8) rgba(226, 123, 49, 0.18);
+}
+
+.p-scratch-bonus__card-text-block {
+  text-align: center;
+}
+
+.p-scratch-bonus__card-lead {
+  font-size: rem(14);
+  font-weight: $bold;
+  color: #3d0e01;
+  letter-spacing: 0;
+  line-height: 2;
+  font-family: $base-font-family;
+}
+
+.p-scratch-bonus__card-title {
+  font-size: rem(24);
+  font-weight: $bold;
+  color: var(--accent-secondary);
+  line-height: 1.17;
+  font-family: var(--second-font-family);
+}
+
+.p-scratch-bonus__card-visual {
+  width: min(100%, rem(217));
+
+  img {
+    aspect-ratio: 217/101;
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.p-scratch-bonus__note {
+  margin-top: rem(8);
+  background-color: #f9fafb;
+  border-left: rem(3.5) solid var(--accent-secondary);
+  border-radius: rem(4);
+  padding: rem(12) rem(16);
+}
+
+.p-scratch-bonus__note-text {
+  font-size: rem(12);
+  font-weight: $regular;
+  color: #7b7b7b;
+  letter-spacing: 0;
+  line-height: 1.4;
+  font-family: $base-font-family;
+  font-feature-settings: "palt";
+}

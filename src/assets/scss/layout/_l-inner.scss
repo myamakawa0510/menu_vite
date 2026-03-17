@@ -1,12 +1,11 @@
 @use "foundation"as *;
 
 .l-inner {
-  width: rem(1240);
-  max-width: 100%;
-  margin-inline: auto;
+  width: 100%;
   padding-inline: rem(20);
 
   @include mq("md") {
-    width: min(100%, rem(600));
+    width: min(100%, rem(1100));
+    margin-inline: auto;
   }
 }

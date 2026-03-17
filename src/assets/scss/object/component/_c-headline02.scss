@@ -1,0 +1,28 @@
+@use "foundation"as *;
+
+.c-headline02 {
+  color: var(--white);
+  font-family: var(--second-font-family);
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: 1.2;
+  letter-spacing: -0.15em;
+  padding-bottom: rem(10);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: rem(3);
+    left: 0;
+    bottom: 0;
+    background: var(--white);
+    border-radius: 100vh;
+  }
+}
+
+.c-headline02__small {
+  font-size: rem(14);
+  letter-spacing: -0.02em;
+}
