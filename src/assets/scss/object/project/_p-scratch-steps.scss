@@ -4,6 +4,7 @@
   background-color: #fff6f0;
   border-bottom: rem(1.715) solid #e5e7eb;
   padding-block: rem(30) rem(34);
+  background: url(../img/scratch-step_bg01.png) center center / contain repeat-y;
 
   @include mq("md") {
     padding-block: rem(40) rem(48);

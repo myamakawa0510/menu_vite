@@ -9,7 +9,7 @@
   justify-content: center;
   width: rem(50);
   height: rem(50);
-  padding: rem(10);
+  padding: rem(14.5) rem(10);
   border: none;
   border-radius: 100vh;
   background: var(--white);
@@ -69,17 +69,18 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  border-radius: 100vh;
 
   &:nth-of-type(1) {
-    top: rem(15);
+    top: rem(16);
   }
 
   &:nth-of-type(2) {
-    top: rem(27);
+    top: rem(24.5);
   }
 
   &:nth-of-type(3) {
-    top: rem(39);
+    top: rem(33);
   }
 }
 
@@ -88,7 +89,7 @@
 
     &:nth-of-type(1) {
       transform: translateX(-50%) rotate(315deg);
-      top: rem(27);
+      top: rem(24.5);
 
     }
 
@@ -98,7 +99,7 @@
 
     &:nth-of-type(3) {
       transform: translateX(-50%) rotate(-315deg);
-      top: rem(27);
+      top: rem(24.5);
     }
   }
 }

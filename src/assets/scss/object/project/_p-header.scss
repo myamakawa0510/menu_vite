@@ -17,6 +17,11 @@
   justify-content: space-between;
   padding: rem(16) rem(14);
   margin-inline: auto;
+
+  @include mq("md") {
+    width: min(100%, rem(1100));
+    margin-inline: auto;
+  }
 }
 
 .p-header__logo {

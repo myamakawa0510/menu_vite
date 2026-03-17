@@ -1,0 +1,15 @@
+@use "foundation"as *;
+
+.p-footer {
+  padding-block: rem(7.25) rem(7.75);
+  background: #3D0E01;
+  margin-bottom: rem(127);
+}
+
+.p-footer__copyright {
+  color: var(--white);
+  font-size: rem(12.681);
+  font-weight: $regular;
+  line-height: 1.8;
+  text-align: center;
+}

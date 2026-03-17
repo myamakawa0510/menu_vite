@@ -1,0 +1,28 @@
+@use "foundation"as *;
+
+.p-scratch-intro {
+  padding-block: rem(16) rem(28);
+}
+
+.p-scratch-intro__lead {
+  color: #3D0E01;
+  font-feature-settings: 'palt'on;
+  font-size: rem(14);
+  font-weight: $medium;
+  line-height: 1.4;
+  letter-spacing: 0.028em;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: rem(3);
+    left: 0;
+    bottom: rem(-12);
+    background-image: radial-gradient(circle, var(--accent-secondary) 1.5px, transparent 1.5px);
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: rem(6) rem(3);
+  }
+}
