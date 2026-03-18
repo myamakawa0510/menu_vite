@@ -26,6 +26,7 @@
 }
 
 .p-scratch-bonus__card-lead {
+  display: block;
   font-size: rem(14);
   font-weight: $bold;
   color: #3d0e01;
@@ -35,6 +36,7 @@
 }
 
 .p-scratch-bonus__card-title {
+  display: block;
   font-size: rem(24);
   font-weight: $bold;
   color: var(--accent-secondary);

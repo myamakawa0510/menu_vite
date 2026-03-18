@@ -379,9 +379,9 @@ fadeIns.forEach((fadeIn) => {
 });
 
 // FAQ アコーディオン
-document.querySelectorAll(".p-scratch-faq__item").forEach((details) => {
-    const summary = details.querySelector(".p-scratch-faq__trigger");
-    const content = details.querySelector(".p-scratch-faq__content");
+document.querySelectorAll(".p-faq__item").forEach((details) => {
+    const summary = details.querySelector(".p-faq__trigger");
+    const content = details.querySelector(".p-faq__content");
     let isAnimating = false;
 
     summary.addEventListener("click", (e) => {

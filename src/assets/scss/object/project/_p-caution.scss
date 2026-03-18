@@ -1,6 +1,6 @@
 @use "foundation"as *;
 
-.p-scratch-caution {
+.p-caution {
   background-color: #f9fafb;
   padding-block: rem(30);
 
@@ -9,11 +9,11 @@
   }
 }
 
-.p-scratch-caution__headline {
+.p-caution__headline {
   margin-top: 0;
 }
 
-.p-scratch-caution__list {
+.p-caution__list {
   margin-top: rem(16);
   padding: 0;
   list-style: none;
@@ -23,8 +23,8 @@
   }
 }
 
-.p-scratch-caution__item {
-  margin-top: rem(4);
+.p-caution__item {
+  / margin-top: rem(4);
   display: flex;
   gap: rem(8);
   align-items: flex-start;
@@ -34,7 +34,7 @@
   }
 }
 
-.p-scratch-caution__item-mark {
+.p-caution__item-mark {
   flex-shrink: 0;
   font-size: rem(14);
   font-weight: $regular;
@@ -44,7 +44,7 @@
   font-family: $base-font-family;
 }
 
-.p-scratch-caution__item-text {
+.p-caution__item-text {
   margin: 0;
   flex: 1;
   min-width: 0;

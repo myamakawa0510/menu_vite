@@ -6,9 +6,10 @@ html {
   // SP ベース: スマホ 375px 基準でスケール
   font-size: vw(375, 16);
 
-  // 601px〜: タブレット以上は固定
+  // 601px〜: タブレット以上は1100px 基準でスケール
   @include mq("md") {
-    font-size: 16px;
+    // font-size: 16px;
+    font-size: vw(1100, 16);
   }
 }
 
