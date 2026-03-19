@@ -17,9 +17,10 @@
   justify-content: space-between;
   padding: rem(16) rem(14);
   margin-inline: auto;
+  position: relative;
 
   @include mq("md") {
-    width: min(100%, rem(1100));
+    width: min(100%, rem(600));
     margin-inline: auto;
   }
 }

@@ -3,7 +3,8 @@
 /* ハンバーガーメニュー */
 
 .p-hamburger {
-  position: fixed;
+  // position: fixed;
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,7 +16,7 @@
   background: var(--white);
   box-shadow: 0 rem(2) rem(8) rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  top: 0;
+  top: rem(1);
   right: rem(10);
   z-index: 10000;
 }

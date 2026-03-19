@@ -3,6 +3,8 @@
 @use 'functions'as *;
 
 html {
+  scrollbar-gutter: stable; // スクロールバー消失によるレイアウトシフト防止
+
   // SP ベース: スマホ 375px 基準でスケール
   font-size: vw(375, 16);
 

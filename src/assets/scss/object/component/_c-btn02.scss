@@ -14,4 +14,11 @@
   letter-spacing: 0;
   line-height: 1.5;
   font-family: $base-font-family;
+  transition: 0.3s ease-out;
+}
+
+@media (any-hover: hover) {
+  .c-btn02:hover {
+    opacity: 0.7;
+  }
 }

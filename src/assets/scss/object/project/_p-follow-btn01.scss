@@ -5,7 +5,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: rem(19.4) rem(20) rem(28.5);
+  padding: rem(19.4) rem(11) rem(28.5);
   background: var(--white);
   z-index: 100;
 }
@@ -29,9 +29,14 @@
   line-height: 1.33;
   text-decoration-line: underline;
   text-underline-offset: rem(2);
+  transition: 0.3s ease-out;
 
   &:first-of-type {
     padding-right: rem(15);
+  }
+
+  &:nth-of-type(2) {
+    padding-left: rem(15);
     position: relative;
 
     &::after {
@@ -39,14 +44,16 @@
       content: '';
       width: 1px;
       height: rem(14);
-      right: 0;
+      left: 0;
       top: 50%;
       transform: translateY(-50%);
       background: #3D0E01;
     }
   }
+}
 
-  &:last-of-type {
-    padding-left: rem(15);
+@media (any-hover: hover) {
+  .p-follow-btn01__link:hover {
+    opacity: 0.7;
   }
 }

@@ -6,7 +6,6 @@
 
   @include mq("md") {
     width: min(100%, rem(600));
-    width: min(100%, rem(1100));
     margin-inline: auto;
   }
 }

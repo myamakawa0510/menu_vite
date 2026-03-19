@@ -23,7 +23,8 @@
   background-color: var(--white);
   border-radius: rem(10);
   box-shadow: 0 rem(3) rem(8) rgba(226, 123, 49, 0.18);
-  padding: rem(18) rem(18) rem(20);
+  padding: rem(14) rem(14) rem(16);
+  border: rem(4) solid #E61E0A;
 }
 
 
@@ -84,18 +85,17 @@
 .p-scratch-steps__arrow {
   display: flex;
   justify-content: center;
-  margin-top: rem(16);
-  margin-bottom: rem(16);
-  margin-left: 0;
-}
+  width: rem(36);
+  margin-inline: auto;
+  margin-top: rem(10);
 
-.p-scratch-steps__arrow-inner {
-  display: block;
-  width: 0;
-  height: 0;
-  border-left: rem(15) solid transparent;
-  border-right: rem(15) solid transparent;
-  border-top: rem(20) solid var(--theme);
+  svg {
+    display: grid;
+    aspect-ratio: 38/28;
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+  }
 }
 
 .p-scratch-steps__note {
@@ -103,7 +103,7 @@
   border: rem(4) solid #FFE100;
   background: linear-gradient(0deg, rgba(255, 225, 0, 0.12) 0%, rgba(255, 225, 0, 0.12) 100%),
     #ffffff;
-  padding: rem(12) rem(16);
+  padding: rem(8) rem(12);
   margin-top: rem(16);
 }
 
@@ -125,6 +125,7 @@
 
 .p-scratch-steps__note-icon {
   width: rem(29);
+  flex-shrink: 0;
   aspect-ratio: 29/41;
   height: auto;
   background: url(../img/icon_caution01.svg) center center / contain no-repeat;
