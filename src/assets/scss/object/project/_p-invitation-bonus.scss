@@ -1,0 +1,259 @@
+@use "foundation"as *;
+
+.p-invitation-bonus {
+  padding-block: rem(48) rem(26);
+}
+
+// === セクションタイトル ===
+.p-invitation-bonus__headline {}
+
+
+// === キャンペーン情報 ===
+.p-invitation-bonus__campaign {
+  margin-top: rem(16);
+}
+
+.p-invitation-bonus__campaign {
+  width: 100%;
+
+  img {
+    aspect-ratio: 335/156;
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+  }
+}
+
+// === 説明文 ===
+.p-invitation-bonus__desc {
+  font-size: rem(14);
+  color: #3d0e01;
+  line-height: 1.4;
+  font-feature-settings: 'palt';
+  margin-top: rem(20);
+  padding-top: rem(20);
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: rem(3);
+    left: 0;
+    top: 0;
+    background-image: radial-gradient(circle, var(--accent-secondary) 1.5px, transparent 1.5px);
+    background-position: left top;
+    background-repeat: repeat-x;
+    background-size: rem(6) rem(3);
+  }
+}
+
+
+.p-invitation-bonus__desc-strong {
+  font-weight: $extra-bold;
+}
+
+.p-invitation-bonus__desc-num {
+  font-size: rem(16);
+}
+
+// === カード ===
+.p-invitation-bonus__cards {
+  display: flex;
+  gap: rem(4);
+  margin-top: rem(20);
+}
+
+.p-invitation-bonus__card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  padding: rem(16) rem(12) rem(14);
+  background-color: $white;
+  border-radius: rem(10);
+}
+
+.p-invitation-bonus__card--you {
+  border: rem(2) solid $accent-secondary;
+  box-shadow: 0 rem(4) 0 0 $accent-secondary;
+}
+
+.p-invitation-bonus__card--friend {
+  border: rem(2) solid $theme;
+  box-shadow: 0 rem(4) 0 0 #57cb78;
+}
+
+// === クーポンビジュアル ===
+.p-invitation-bonus__coupon {
+  display: flex;
+  align-items: center;
+  border-radius: rem(10);
+  height: rem(64);
+  overflow: hidden;
+}
+
+.p-invitation-bonus__coupon--red,
+.p-invitation-bonus__coupon--green {
+  flex-direction: column;
+  height: auto;
+  background-color: transparent;
+  overflow: visible;
+  border-radius: 0;
+}
+
+.p-invitation-bonus__coupon--red .p-invitation-bonus__coupon-body,
+.p-invitation-bonus__coupon--green .p-invitation-bonus__coupon-body {
+  flex: none;
+  height: auto;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: none;
+  gap: 0;
+  padding: 0;
+}
+
+.p-invitation-bonus__coupon-img {
+  width: 100%;
+  display: block;
+
+  img {
+    aspect-ratio: 138 / 64;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.p-invitation-bonus__coupon-side {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: rem(9);
+  font-weight: $bold;
+  color: $white;
+  padding-inline: rem(4);
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.p-invitation-bonus__coupon-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: rem(2);
+  height: 100%;
+  border-left: 1px dashed rgba($white, 0.4);
+  border-right: 1px dashed rgba($white, 0.4);
+}
+
+.p-invitation-bonus__coupon-num {
+  font-size: rem(28);
+  font-weight: $extra-bold;
+  color: #ffe401;
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.p-invitation-bonus__coupon-text {
+  font-size: rem(10);
+  font-weight: $bold;
+  color: $white;
+  letter-spacing: 0.1em;
+}
+
+// === カード情報 ===
+.p-invitation-bonus__card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-invitation-bonus__card-who-img {
+  width: rem(24);
+  flex-shrink: 0;
+
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+
+.p-invitation-bonus__card-who-img01 {
+  width: rem(20);
+
+  img {
+    aspect-ratio: 20/24;
+  }
+}
+
+.p-invitation-bonus__card-who {
+  display: flex;
+  align-items: center;
+  gap: rem(2);
+  white-space: nowrap;
+}
+
+
+.p-invitation-bonus__card-who-name {
+  font-size: rem(18);
+  font-weight: $bold;
+  line-height: 1;
+  letter-spacing: .0em;
+}
+
+.p-invitation-bonus__card-who-name--red {
+  color: $accent-secondary;
+}
+
+.p-invitation-bonus__card-who-name--green {
+  color: $theme;
+}
+
+.p-invitation-bonus__card-who-note {
+  font-size: rem(10);
+  color: #3d0e01;
+  line-height: 1.6;
+  letter-spacing: -.05em;
+  font-weight: $bold;
+}
+
+.p-invitation-bonus__card-amount {
+  font-size: rem(12);
+  font-weight: $bold;
+  color: #480c0c;
+  line-height: rem(28);
+}
+
+.p-invitation-bonus__card-amount-num {
+  font-size: rem(24);
+  font-weight: $extra-bold;
+}
+
+.p-invitation-bonus__card-amount-num--red {
+  color: $accent-secondary;
+}
+
+.p-invitation-bonus__card-amount-num--green {
+  color: $theme;
+}
+
+.p-invitation-bonus__card-amount-unit--red {
+  color: $accent-secondary;
+}
+
+.p-invitation-bonus__card-amount-unit--green {
+  color: $theme;
+}
+
+.p-invitation-bonus__card-detail {
+  font-size: rem(10);
+  color: #3d0e01;
+  line-height: 1.6;
+  letter-spacing: -.05em;
+  margin-top: rem(-7);
+}

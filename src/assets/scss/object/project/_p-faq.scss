@@ -155,7 +155,6 @@
 }
 
 .p-faq__content-desc {
-  margin: 0;
   margin-top: rem(8);
   font-size: rem(12);
   font-weight: $regular;
@@ -164,9 +163,33 @@
   line-height: 1.6;
   font-family: $base-font-family;
   font-feature-settings: "palt";
+  padding-left: rem(15);
+  position: relative;
 
   &+.p-faq__content-desc {
     margin-top: rem(4);
+  }
+
+  &::before {
+    display: inline-block;
+    position: absolute;
+    content: '';
+    width: rem(3);
+    aspect-ratio: 1;
+    height: auto;
+    border-radius: 100vh;
+    left: rem(5);
+    top: rem(8);
+    background: var(--text);
+  }
+
+}
+
+.p-faq__content-desc01 {
+  padding-left: 0;
+
+  &::before {
+    display: none;
   }
 }
 

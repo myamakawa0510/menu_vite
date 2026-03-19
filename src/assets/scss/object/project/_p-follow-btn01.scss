@@ -1,6 +1,6 @@
 @use "foundation"as *;
 
-.p-follow-btn {
+.p-follow-btn01 {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -10,19 +10,19 @@
   z-index: 100;
 }
 
-.p-follow-btn-wrap {
+.p-follow-btn01-wrap {
   display: flex;
   justify-content: center;
 }
 
-.p-follow-btn__links {
+.p-follow-btn01__links {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: rem(16);
 }
 
-.p-follow-btn__link {
+.p-follow-btn01__link {
   color: #3D0E01;
   font-size: rem(12);
   font-weight: $regular;

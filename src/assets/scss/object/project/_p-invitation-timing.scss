@@ -1,0 +1,114 @@
+@use "foundation"as *;
+
+.p-invitation-timing {
+  background-color: #ffe2ca;
+  padding-block: rem(26) rem(24);
+}
+
+// === セクションタイトル ===
+.p-invitation-timing__head {
+  margin-bottom: rem(10);
+}
+
+.p-invitation-timing__title {
+  color: #3d0e01;
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: 1.2;
+  padding-bottom: rem(10);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: rem(3);
+    left: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, #3d0e01 1.5px, transparent 1.5px);
+    background-position: left top;
+    background-repeat: repeat-x;
+    background-size: rem(6) rem(3);
+  }
+}
+
+// === カード一覧 ===
+.p-invitation-timing__cards {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+}
+
+// === カード ===
+.p-invitation-timing__card {
+  background-color: $white;
+  border-radius: rem(10);
+  padding: rem(18) rem(16);
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+}
+
+.p-invitation-timing__card--red {
+  border: rem(2) solid $accent-secondary;
+  box-shadow: 0 rem(4) 0 0 $accent-secondary, 0 rem(7) rem(8) 0 rgba(226, 123, 49, 0.18);
+}
+
+.p-invitation-timing__card--green {
+  border: rem(2) solid $theme;
+  box-shadow: 0 rem(4) 0 0 #57cb78, 0 rem(7) rem(8) 0 rgba(226, 123, 49, 0.18);
+}
+
+// === カードヘッダー ===
+.p-invitation-timing__card-head {
+  display: flex;
+  align-items: center;
+  gap: rem(2);
+}
+
+// === アイコン ===
+.p-invitation-timing__card-icon {
+  width: rem(24);
+  flex-shrink: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+.p-invitation-timing__card-icon--smaile {
+  width: rem(20);
+  margin-inline: rem(3);
+
+  img {
+    aspect-ratio: 20 / 24;
+  }
+}
+
+// === 名前 ===
+.p-invitation-timing__card-name {
+  font-size: rem(18);
+  font-weight: $bold;
+  line-height: calc(20 / 18);
+  letter-spacing: -0.00836em;
+  white-space: nowrap;
+}
+
+.p-invitation-timing__card-name--red {
+  color: $accent-secondary;
+}
+
+.p-invitation-timing__card-name--green {
+  color: $theme;
+}
+
+// === テキスト ===
+.p-invitation-timing__card-text {
+  font-size: rem(14);
+  color: #3d0e01;
+  line-height: 1.4;
+}

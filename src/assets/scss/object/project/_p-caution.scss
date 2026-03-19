@@ -2,11 +2,18 @@
 
 .p-caution {
   background-color: #f9fafb;
-  padding-block: rem(30);
 
   @include mq("md") {
     padding-block: rem(40);
   }
+}
+
+.p-caution--invitation {
+  padding-top: rem(20);
+}
+
+.p-caution__block {
+  padding-block: rem(30);
 }
 
 .p-caution__headline {
@@ -23,13 +30,37 @@
   }
 }
 
+.p-caution__group {
+  margin-top: rem(16);
+  display: flex;
+  flex-direction: column;
+  gap: rem(4);
+
+  @include mq("md") {
+    margin-top: rem(20);
+  }
+}
+
+.p-caution__group-title {
+  font-size: rem(14);
+  font-weight: $bold;
+  color: #3d0e01;
+  line-height: 1.5;
+  font-family: $base-font-family;
+  font-feature-settings: "palt";
+}
+
 .p-caution__item {
-  / margin-top: rem(4);
+  margin-top: rem(4);
   display: flex;
   gap: rem(8);
   align-items: flex-start;
 
   &:first-child {
+    margin-top: 0;
+  }
+
+  .p-caution__group & {
     margin-top: 0;
   }
 }

@@ -1,0 +1,512 @@
+@use "foundation"as *;
+
+.p-invitation-method {}
+
+.p-invitation-method__nav {
+  background-color: #fff6f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(16);
+  padding-block: rem(44);
+}
+
+.p-invitation-method__nav-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(4);
+}
+
+.p-invitation-method__nav-title {
+  color: #3d0e01;
+  font-size: rem(24);
+  font-weight: $bold;
+  line-height: 1;
+  letter-spacing: -0.013em;
+}
+
+.p-invitation-method__nav-sub {
+  color: #3d0e01;
+  font-size: rem(14);
+  font-weight: $bold;
+  line-height: 1.4;
+  letter-spacing: 0.0143em;
+}
+
+.p-invitation-method__nav-btns {
+  display: flex;
+  gap: rem(12);
+  width: 100%;
+  box-shadow: 0 rem(4) rem(8) 0 rgba(226, 123, 49, 0.18);
+}
+
+.p-invitation-method__nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: rem(15.5) rem(6.25) rem(5.5);
+  flex: 1;
+  background-color: $white;
+  border-radius: rem(10);
+  text-decoration: none;
+}
+
+.p-invitation-method__nav-btn--red {
+  border: rem(4) solid $accent-secondary;
+  box-shadow: 0 rem(4) 0 rem(-3) rgba(171, 38, 38, 1);
+}
+
+.p-invitation-method__nav-btn--green {
+  border: rem(4) solid $theme;
+  box-shadow: 0 rem(4) 0 rem(-3) rgba(51, 147, 83, 1);
+}
+
+.p-invitation-method__nav-btn-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: rem(2);
+}
+
+.p-invitation-method__nav-btn-text {
+  font-size: rem(14);
+  font-weight: $bold;
+  line-height: 1.4;
+  letter-spacing: -0.02232em;
+  text-align: center;
+}
+
+.p-invitation-method__nav-btn-text--big {
+  font-size: rem(18);
+  font-weight: $bold;
+  line-height: 1.4;
+  letter-spacing: -0.017em;
+}
+
+.p-invitation-method__nav-btn-text--small {
+  font-size: rem(12);
+  font-weight: $bold;
+  line-height: 1.4;
+  letter-spacing: -0.026em;
+  display: block;
+}
+
+.p-invitation-method__nav-btn--red .p-invitation-method__nav-btn-text {
+  color: $accent-secondary;
+  display: block;
+}
+
+.p-invitation-method__nav-btn--green .p-invitation-method__nav-btn-text {
+  color: $theme;
+}
+
+.p-invitation-method__nav-btn-icon {
+  display: block;
+  width: rem(24);
+  aspect-ratio: 1;
+  height: auto;
+  margin-top: rem(-4);
+  flex-shrink: 0;
+
+  svg {
+    display: grid;
+  }
+}
+
+// === 招待したい セクション ===
+
+.p-invitation-method__send {
+  background-color: #fff6f0;
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  padding-block: rem(24);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: rem(20);
+    left: 0;
+    bottom: rem(-20);
+    background: url(../img/invitation-method__send_bg.svg) center center /100% 100% no-repeat;
+    z-index: 1;
+  }
+}
+
+.p-invitation-method__send-head {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+}
+
+.p-invitation-method__send-title {
+  font-size: rem(20);
+  font-weight: $bold;
+  color: $accent-secondary;
+  line-height: 1.2;
+  font-family: var(--second-font-family);
+  padding-bottom: rem(10);
+  border-bottom: rem(1) solid $accent-secondary;
+}
+
+.p-invitation-method__send-lead {
+  font-size: rem(14);
+  color: #3d0e01;
+  line-height: 1.4;
+}
+
+.p-invitation-method__send-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(12);
+}
+
+.p-invitation-method__send-card {
+  background: $white;
+  border: rem(2) solid $accent-secondary;
+  border-radius: rem(10);
+  box-shadow: 0 rem(4) 0 0 $accent-secondary, 0 rem(7) rem(8) 0 rgba(226, 123, 49, 0.18);
+  padding: rem(18);
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+  width: 100%;
+}
+
+.p-invitation-method__send-card--top {
+  border-radius: rem(10) rem(10) 0 0;
+  box-shadow: none;
+}
+
+.p-invitation-method__send-card-img {
+  overflow: hidden;
+  margin-inline: auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.p-invitation-method__send-card-img01 {
+  width: min(100%, rem(248));
+
+  img {
+    aspect-ratio: 248/142
+  }
+}
+
+.p-invitation-method__send-card-img02 {
+  width: min(100%, rem(118.34));
+
+  img {
+    aspect-ratio: 118.34/104;
+  }
+}
+
+.p-invitation-method__send-card-desc {
+  font-size: rem(14);
+  color: #3d0e01;
+  line-height: 1.4;
+  width: 100%;
+}
+
+.p-invitation-method__send-btn {}
+
+.p-invitation-method__send-arrow {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  width: rem(30);
+  height: rem(24);
+}
+
+.p-invitation-method__send-card-wrap {
+  width: 100%;
+  border-radius: rem(10);
+  box-shadow: 0 rem(4) rem(8) 0 rgba(226, 123, 49, 0.18), 0 rem(4) 0 0 $accent-secondary;
+}
+
+.p-invitation-method__send-timing {
+  background: $accent-secondary;
+  border-radius: 0 0 rem(10) rem(10);
+  padding: rem(12) rem(18) rem(18);
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+}
+
+.p-invitation-method__send-timing-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(8);
+  width: fit-content;
+}
+
+.p-invitation-method__send-timing-label {
+  display: flex;
+  align-items: center;
+  gap: rem(2);
+  padding-bottom: rem(10);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: rem(3);
+    left: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, var(--white) 1.5px, transparent 1.5px);
+    background-position: left top;
+    background-repeat: repeat-x;
+    background-size: 6px 3px;
+  }
+}
+
+.p-invitation-method__send-timing-icon {
+  flex-shrink: 0;
+  width: rem(24);
+  height: rem(24);
+}
+
+.p-invitation-method__send-timing-title {
+  font-size: rem(18);
+  font-weight: $bold;
+  color: $white;
+  line-height: calc(20 / 18);
+  letter-spacing: -0.00836em;
+  white-space: nowrap;
+}
+
+.p-invitation-method__send-timing-text {
+  font-size: rem(14);
+  font-weight: $bold;
+  color: $white;
+  line-height: 1.4;
+  letter-spacing: .0em;
+}
+
+.p-invitation-method__send-timing-note {
+  font-size: rem(12);
+}
+
+.p-invitation-method__send-caution {
+  border: rem(4) solid #ffe100;
+  border-radius: rem(10);
+  background: rgba(255, 225, 0, 0.12);
+  padding: rem(14) rem(12) rem(20);
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+}
+
+.p-invitation-method__send-caution-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: rem(12);
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: rem(3);
+    left: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, var(--accent-secondary) rem(1.5), transparent rem(1.5));
+    background-position: left top;
+    background-repeat: repeat-x;
+    background-size: rem(6) rem(3);
+  }
+}
+
+.p-invitation-method__send-caution-icon {
+  display: block;
+  width: rem(29);
+
+  img {
+    aspect-ratio: 29/40.6;
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.p-invitation-method__send-caution-title {
+  font-size: rem(16);
+  font-weight: $bold;
+  color: $accent-secondary;
+  line-height: 1.25;
+  text-align: center;
+  letter-spacing: .0em;
+}
+
+.p-invitation-method__send-caution-lead {
+  font-size: rem(12);
+  color: #3d0e01;
+  line-height: 1.4;
+  letter-spacing: -0.0125em;
+}
+
+.p-invitation-method__send-caution-list {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  padding-left: 0;
+  list-style: none;
+  counter-reset: caution-counter;
+}
+
+.p-invitation-method__send-caution-item {
+  display: flex;
+  font-size: rem(12);
+  gap: rem(1);
+  color: #3d0e01;
+  line-height: 1.4;
+  letter-spacing: -0.0125em;
+  counter-increment: caution-counter;
+
+  &::before {
+    content: counter(caution-counter) ".";
+    font-weight: $bold;
+    flex-shrink: 0;
+  }
+}
+
+// === 招待された セクション ===
+
+.p-invitation-method__receive {
+  background: #F0FFF1;
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  padding-block: rem(34) rem(24);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: rem(20);
+    left: 0;
+    bottom: rem(-20);
+    background: url(../img/invitation-method__receive_bg.svg) center center /100% 100% no-repeat;
+  }
+}
+
+.p-invitation-method__receive-head {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+}
+
+.p-invitation-method__receive-title {
+  font-size: rem(20);
+  font-weight: $bold;
+  color: $theme;
+  line-height: 1.2;
+  font-family: var(--second-font-family);
+  padding-bottom: rem(10);
+  border-bottom: rem(3) solid $theme;
+}
+
+.p-invitation-method__receive-lead {
+  font-size: rem(14);
+  color: #3d0e01;
+  line-height: 1.5;
+}
+
+.p-invitation-method__receive-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(8);
+}
+
+.p-invitation-method__receive-card {
+  background: $white;
+  border: rem(2) solid $theme;
+  border-radius: rem(10);
+  box-shadow: 0 rem(3) rem(8) rem(-1) rgba(49, 226, 108, 0.18), 0 rem(4) 0 0 rgba(67, 198, 111, 1);
+  padding: rem(22) rem(16) rem(14);
+  display: flex;
+  flex-direction: column;
+  gap: rem(12);
+  width: 100%;
+}
+
+.p-invitation-method__receive-card-img {
+  overflow: hidden;
+  margin-inline: auto;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.p-invitation-method__receive-card-img01 {
+  width: min(100%, rem(90));
+
+  img {
+    aspect-ratio: 1;
+    border-radius: rem(22);
+  }
+}
+
+.p-invitation-method__receive-card-img02 {
+  width: min(100%, rem(248));
+
+  img {
+    aspect-ratio: 248/155;
+    border-radius: rem(10);
+  }
+}
+
+.p-invitation-method__receive-card-desc {
+  font-size: rem(14);
+  color: #3d0e01;
+  line-height: 1.5;
+  width: 100%;
+}
+
+.p-invitation-method__receive-btn {}
+
+.p-invitation-method__receive-arrow {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  width: rem(30);
+  height: rem(24);
+}
+
+.p-invitation-method__send-caution-link {
+  display: flex;
+  align-items: center;
+  gap: rem(4);
+  font-size: rem(14);
+  font-weight: $bold;
+  color: $accent-secondary;
+  line-height: calc(20 / 14);
+  letter-spacing: -0.0107em;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    width: rem(16);
+    height: auto;
+    aspect-ratio: 1;
+    background: url(../img/icon_down_red01.svg) center center /contain no-repeat;
+  }
+}

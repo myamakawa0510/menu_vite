@@ -1,0 +1,17 @@
+@use "foundation"as *;
+
+.c-btn02 {
+  width: min(100%, rem(353));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem(12);
+  background-color: var(--theme);
+  border-radius: rem(4);
+  font-size: rem(16);
+  font-weight: $bold;
+  color: var(--white);
+  letter-spacing: 0;
+  line-height: 1.5;
+  font-family: $base-font-family;
+}

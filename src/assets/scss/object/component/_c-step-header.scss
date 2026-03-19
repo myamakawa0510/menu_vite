@@ -1,0 +1,71 @@
+@use "foundation"as *;
+
+.c-step-header {
+  display: flex;
+  align-items: center;
+  gap: rem(12);
+}
+
+.c-step-header__num {
+  flex-shrink: 0;
+  display: grid;
+  place-content: center;
+  width: rem(40);
+  aspect-ratio: 1;
+  height: auto;
+  background: var(--accent-secondary);
+  border-radius: 100vh;
+  font-size: rem(18);
+  font-weight: $bold;
+  color: var(--white);
+  letter-spacing: -0.02em;
+  line-height: 1.33;
+  font-family: var(--second-font-family);
+}
+
+.c-step-header__icon {
+  flex-shrink: 0;
+  width: rem(40);
+  aspect-ratio: 1;
+  height: auto;
+  background: var(--accent-secondary);
+  border-radius: 100vh;
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: rem(24);
+    aspect-ratio: 1;
+    height: auto;
+    background: url(../img/icon_check_white01.svg) center center / contain no-repeat;
+  }
+}
+
+.c-step-header--green {
+  margin-right: rem(-5);
+}
+
+.c-step-header--green .c-step-header__num,
+.c-step-header--green .c-step-header__icon {
+  background: $theme;
+}
+
+.c-step-header__title {
+  display: block;
+  font-size: rem(18);
+  font-weight: $bold;
+  color: #3d0e01;
+  line-height: 1.11;
+  font-family: var(--second-font-family);
+  letter-spacing: .0em;
+}
+
+.c-step-header__title--wide {
+  line-height: 1.22;
+  letter-spacing: .0em;
+}
