@@ -9,6 +9,7 @@
   align-items: center;
   gap: rem(16);
   padding-block: rem(44);
+  position: relative;
 }
 
 .p-invitation-method__nav-head {
@@ -38,8 +39,21 @@
   display: flex;
   gap: rem(12);
   width: 100%;
-  box-shadow: 0 rem(4) rem(8) 0 rgba(226, 123, 49, 0.18);
   margin-top: rem(16);
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: rem(6);
+    left: 0;
+    bottom: rem(-41);
+    background-image: radial-gradient(circle, var(--accent-secondary) rem(3), transparent rem(3));
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-size: rem(12) rem(6);
+  }
 }
 
 .p-invitation-method__nav-btn {
@@ -51,16 +65,17 @@
   background-color: $white;
   border-radius: rem(10);
   text-decoration: none;
+  position: relative;
 }
 
 .p-invitation-method__nav-btn--red {
   border: rem(4) solid $accent-secondary;
-  box-shadow: 0 rem(4) 0 rem(-3) rgba(171, 38, 38, 1);
+  box-shadow: 0 rem(4) 0 0 #AB2626;
 }
 
 .p-invitation-method__nav-btn--green {
   border: rem(4) solid $theme;
-  box-shadow: 0 rem(4) 0 rem(-3) rgba(51, 147, 83, 1);
+  box-shadow: 0 rem(4) 0 0 #339353;
 }
 
 .p-invitation-method__nav-btn-inner {
@@ -112,6 +127,9 @@
 
   svg {
     display: grid;
+    width: 100%;
+    aspect-ratio: 1;
+    height: auto;
   }
 }
 
@@ -183,7 +201,7 @@
   border: rem(2) solid $accent-secondary;
   border-radius: rem(10);
   box-shadow: 0 rem(4) 0 0 $accent-secondary, 0 rem(7) rem(8) 0 rgba(226, 123, 49, 0.18);
-  padding: rem(18);
+  padding: rem(16);
   display: flex;
   flex-direction: column;
   gap: rem(12);
@@ -232,6 +250,7 @@
   color: #3d0e01;
   line-height: 1.4;
   width: 100%;
+  letter-spacing: .0em;
 }
 
 .p-invitation-method__send-btn {}
@@ -243,6 +262,13 @@
   width: rem(30);
   height: rem(24);
   margin-top: rem(5);
+
+  svg {
+    width: 100%;
+    display: grid;
+    aspect-ratio: 30/20;
+    height: auto;
+  }
 }
 
 .p-invitation-method__send-card-wrap {
@@ -284,10 +310,10 @@
     height: rem(3);
     left: 0;
     bottom: 0;
-    background-image: radial-gradient(circle, var(--white) 1.5px, transparent 1.5px);
+    background-image: radial-gradient(circle, var(--white) rem(1.5), transparent rem(1.5));
     background-position: left top;
     background-repeat: repeat-x;
-    background-size: 6px 3px;
+    background-size: rem(6) rem(3);
   }
 }
 
@@ -327,6 +353,8 @@
   flex-direction: column;
   gap: rem(16);
   margin-top: rem(32);
+  background: linear-gradient(0deg, rgba(255, 225, 0, 0.12) 0%, rgba(255, 225, 0, 0.12) 100%),
+    #FFF;
 }
 
 .p-invitation-method__send-caution-head {
@@ -457,6 +485,7 @@
   color: #3d0e01;
   line-height: 1.5;
   margin-top: rem(24);
+  font-weight: $regular;
 }
 
 .p-invitation-method__receive-steps {
@@ -471,7 +500,7 @@
   border: rem(2) solid $theme;
   border-radius: rem(10);
   box-shadow: 0 rem(3) rem(8) rem(-1) rgba(49, 226, 108, 0.18), 0 rem(4) 0 0 rgba(67, 198, 111, 1);
-  padding: rem(22) rem(16) rem(14);
+  padding: rem(16);
   display: flex;
   flex-direction: column;
   gap: rem(12);
@@ -512,6 +541,9 @@
   color: #3d0e01;
   line-height: 1.5;
   width: 100%;
+  letter-spacing: .0em;
+  font-weight: $regular;
+  font-feature-settings: "palt";
 }
 
 .p-invitation-method__receive-btn {}
@@ -524,6 +556,13 @@
   height: rem(24);
   margin-top: rem(12);
   margin-bottom: rem(3);
+
+  svg {
+    width: 100%;
+    display: grid;
+    aspect-ratio: 30/20;
+    height: auto;
+  }
 }
 
 .p-invitation-method__send-caution-link {
@@ -536,6 +575,7 @@
   line-height: calc(20 / 14);
   letter-spacing: -0.0107em;
   text-decoration: none;
+  transition: 0.3s ease-out;
 
   &::after {
     content: '';
@@ -543,5 +583,11 @@
     height: auto;
     aspect-ratio: 1;
     background: url(../img/icon_down_red01.svg) center center /contain no-repeat;
+  }
+}
+
+@media (any-hover: hover) {
+  .p-invitation-method__send-caution-link:hover {
+    opacity: 0.7;
   }
 }

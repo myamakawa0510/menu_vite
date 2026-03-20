@@ -20,7 +20,7 @@
     height: rem(3);
     left: 0;
     bottom: rem(-12);
-    background-image: radial-gradient(circle, var(--accent-secondary) 1.5px, transparent 1.5px);
+    background-image: radial-gradient(circle, var(--accent-secondary) rem(1.5), transparent rem(1.5));
     background-position: left bottom;
     background-repeat: repeat-x;
     background-size: rem(6) rem(3);

@@ -26,7 +26,6 @@
 }
 
 .p-faq__item {
-  border-radius: rem(10);
   overflow: hidden;
 
   &+.p-faq__item {
@@ -129,6 +128,10 @@
   }
 }
 
+.p-faq__content-list01 {
+  margin-top: rem(20);
+}
+
 .p-faq__content-text_bold {
   font-weight: $bold;
   margin-top: rem(16);
@@ -155,7 +158,6 @@
 }
 
 .p-faq__content-desc {
-  margin-top: rem(8);
   font-size: rem(12);
   font-weight: $regular;
   color: #3d0e01;
@@ -191,6 +193,7 @@
   &::before {
     display: none;
   }
+
 }
 
 .p-faq__content-list {

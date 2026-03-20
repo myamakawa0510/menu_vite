@@ -10,27 +10,7 @@
   margin-bottom: rem(10);
 }
 
-.p-invitation-timing__title {
-  color: #3d0e01;
-  font-size: rem(20);
-  font-weight: $bold;
-  line-height: 1.2;
-  padding-bottom: rem(10);
-  position: relative;
-
-  &::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: rem(3);
-    left: 0;
-    bottom: 0;
-    background-image: radial-gradient(circle, #3d0e01 1.5px, transparent 1.5px);
-    background-position: left top;
-    background-repeat: repeat-x;
-    background-size: rem(6) rem(3);
-  }
-}
+.p-invitation-timing__title {}
 
 // === カード一覧 ===
 .p-invitation-timing__cards {

@@ -393,28 +393,36 @@ document.querySelectorAll(".p-faq__item").forEach((details) => {
             const startHeight = content.offsetHeight;
             content.style.height = startHeight + "px";
             requestAnimationFrame(() => {
-                content.style.transition = "height 0.3s ease";
-                content.style.height = "0px";
-                content.addEventListener("transitionend", function handler() {
-                    content.removeEventListener("transitionend", handler);
-                    details.open = false;
-                    content.style.height = "";
-                    content.style.transition = "";
-                    isAnimating = false;
+                requestAnimationFrame(() => {
+                    content.style.transition = "height 0.3s ease, padding-bottom 0.3s ease";
+                    content.style.height = "0px";
+                    content.style.paddingBottom = "0px";
+                    content.addEventListener("transitionend", function handler(e) {
+                        if (e.propertyName !== "height") return;
+                        content.removeEventListener("transitionend", handler);
+                        details.open = false;
+                        content.style.cssText = "";
+                        isAnimating = false;
+                    });
                 });
             });
         } else {
             details.open = true;
+            const naturalPadding = getComputedStyle(content).paddingBottom;
             const endHeight = content.offsetHeight;
+            content.style.paddingBottom = "0px";
             content.style.height = "0px";
             requestAnimationFrame(() => {
-                content.style.transition = "height 0.3s ease";
-                content.style.height = endHeight + "px";
-                content.addEventListener("transitionend", function handler() {
-                    content.removeEventListener("transitionend", handler);
-                    content.style.height = "";
-                    content.style.transition = "";
-                    isAnimating = false;
+                requestAnimationFrame(() => {
+                    content.style.transition = "height 0.3s ease, padding-bottom 0.3s ease";
+                    content.style.height = endHeight + "px";
+                    content.style.paddingBottom = naturalPadding;
+                    content.addEventListener("transitionend", function handler(e) {
+                        if (e.propertyName !== "height") return;
+                        content.removeEventListener("transitionend", handler);
+                        content.style.cssText = "";
+                        isAnimating = false;
+                    });
                 });
             });
         }

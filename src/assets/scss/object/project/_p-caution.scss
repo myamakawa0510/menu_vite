@@ -2,6 +2,7 @@
 
 .p-caution {
   background-color: #f9fafb;
+  padding-block: rem(30);
 
   @include mq("md") {
     padding-block: rem(40);
