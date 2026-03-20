@@ -10,14 +10,16 @@
 
 .p-scratch-fv__caption {
   font-size: rem(18);
-  font-weight: $bold;
+  font-weight: $extra-bold;
   color: var(--white);
   line-height: 1.67;
+  font-family: var(--second-font-family);
 }
 
 .p-scratch-fv__title {
   font-size: rem(24);
-  font-weight: $bold;
+  font-weight: $extra-bold;
+  font-family: var(--second-font-family);
   color: var(--white);
 }
 
@@ -25,6 +27,7 @@
   font-size: rem(18);
   font-weight: $bold;
   color: var(--white);
+  font-family: var(--base-font-family);
 }
 
 .p-scratch-fv__badge {
