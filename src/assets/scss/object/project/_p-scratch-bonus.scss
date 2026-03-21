@@ -16,7 +16,7 @@
   gap: rem(8);
   align-items: center;
   background-color: var(--white);
-  padding: rem(16) rem(16) rem(22);
+  padding: rem(16) rem(16) rem(14);
   border-radius: rem(10);
   box-shadow: 0 rem(3) rem(8) rgba(226, 123, 49, 0.18);
 }
@@ -45,7 +45,7 @@
 }
 
 .p-scratch-bonus__card-visual {
-  width: min(100%, rem(217));
+  width: min(100%, rem(250));
 
   img {
     aspect-ratio: 217/101;

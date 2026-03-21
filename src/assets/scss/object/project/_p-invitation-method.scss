@@ -25,6 +25,8 @@
   font-weight: $bold;
   line-height: 1;
   letter-spacing: -0.013em;
+  font-family: var(--second-font-family);
+  font-weight: $extra-bold;
 }
 
 .p-invitation-method__nav-sub {
@@ -186,6 +188,7 @@
   color: #3d0e01;
   line-height: 1.4;
   margin-top: rem(24);
+  font-weight: $regular;
 }
 
 .p-invitation-method__send-steps {

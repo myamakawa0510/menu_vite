@@ -31,8 +31,7 @@
 
 .p-scratch-about__card-badge {
   position: absolute;
-  width: min(100%, rem(82.6));
-  width: calc(82.6/335*100%);
+  width: calc(90/335*100%);
   right: rem(9);
   top: 50%;
   transform: translateY(-50%);
