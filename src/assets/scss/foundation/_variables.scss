@@ -19,20 +19,18 @@ $padding-sp: 20px;
 ////////////////////
 
 //ブレイクポイント
-$breakpoints: (
-  md:  601,
-  lg:  1024,
-  xl:  1200,
-  pc:  1300,
+$breakpoints: (md: 768,
+  lg: 1024,
+  xl: 1200,
+  pc: 1100,
   xxl: 1440,
 );
 
 //メディアクエリー（SP First: すべて min-width）
-$mediaquerys: (
-  md:  "screen and (min-width: #{map.get($breakpoints,'md')}px)",
-  lg:  "screen and (min-width: #{map.get($breakpoints,'lg')}px)",
-  xl:  "screen and (min-width: #{map.get($breakpoints,'xl')}px)",
-  pc:  "screen and (min-width: #{$inner})",
+$mediaquerys: (md: "screen and (min-width: #{map.get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map.get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map.get($breakpoints,'xl')}px)",
+  pc: "screen and (min-width: #{$inner})",
   xxl: "screen and (min-width: #{map.get($breakpoints,'xxl')}px)",
 );
 
@@ -58,7 +56,8 @@ $accent: #c9a453;
 $accent-secondary: #e61e0a;
 $gray1: #E8E7E4;
 $gray2: #F1F1F1;
-$base-font-family: "Noto Sans JP", sans-serif;
+$base-font-family: "Noto Sans JP",
+sans-serif;
 
 //サブセットを使う場合はここに記載
 // @font-face {

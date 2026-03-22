@@ -7,87 +7,283 @@ body.is-open {
   width: 100%;
 }
 
+/* オーバーレイ（PC時のみ表示） */
+.p-drawer-overlay {
+  display: none;
+
+  @include mq("md") {
+    body.is-open & {
+      display: block;
+      position: fixed;
+      inset: 0;
+      z-index: 1499;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
 nav.p-globalmenusp {
   display: none;
 }
 
-/* g-sub-set: SP時のみJSで付与し、表示を制御（ちらつき対策） */
+/* g-sub-set: JSで付与し、表示を制御（ちらつき対策） */
 nav.p-globalmenusp.g-sub-set {
+  display: block;
+  position: fixed;
+  z-index: 1500;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: all 0.4s ease-out;
+  width: 100%;
+  height: 100dvh;
+  overflow-y: scroll;
+  background-color: $white;
+
   @include mq("md") {
-    display: block;
-    position: fixed;
-    z-index: 1500;
-    top: 0;
-    left: 0;
-    transform: translateX(100%);
-    transition: all 0.6s ease-out;
-    width: 100%;
-    height: 100dvh;
-    overflow-y: scroll;
-    background-color: #3f3f3f;
-    padding: rem(55) rem(45) rem(42);
+    left: auto;
+    right: 0;
+    width: rem(375);
   }
 }
 
 /* このクラスを、jQueryで付与・削除する */
 nav.p-globalmenusp.g-sub-set.is-open {
-  @include mq("md") {
-    transform: translateX(0%);
-  }
+  transform: translateX(0%);
 }
 
-
+/* コンテナ */
 nav.p-globalmenusp.g-sub-set .p-globalmenusp__container {
-  @include mq("md") {
-    position: relative;
-    z-index: 1;
-    width: min(100%, rem(285));
-    margin-inline: auto;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  padding: rem(34) rem(20) rem(40);
 }
 
-nav.p-globalmenusp.g-sub-set .p-globalmenusp__logo {
-  @include mq("md") {
-    width: min(100%, rem(273));
-    display: inline-block;
-    margin-left: rem(7);
-  }
+.p-globalmenusp__close {
+  width: rem(30);
+  aspect-ratio: 1;
+  height: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
 
   img {
-    @include mq("md") {
-      aspect-ratio: 273/45;
-      object-fit: contain;
-      height: auto;
-      width: 100%;
-    }
+    aspect-ratio: 1;
+    object-fit: contain;
+    height: auto;
+    width: 100%;
   }
 }
 
-nav.p-globalmenusp.g-sub-set .p-globalmenusp__list {
-  @include mq("md") {
-    margin-top: rem(13);
+/* ロゴ */
+nav.p-globalmenusp.g-sub-set .p-globalmenusp__logo {
+  display: inline-block;
+  width: rem(118);
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 118/32;
+    object-fit: contain;
   }
+}
+
+/* インナー */
+nav.p-globalmenusp.g-sub-set .p-globalmenusp__inner {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+}
+
+/* メインナビ */
+nav.p-globalmenusp.g-sub-set .p-globalmenusp__list {
+  display: flex;
+  flex-direction: column;
 }
 
 .p-globalmenusp__item {
   display: block;
-}
 
-nav.p-globalmenusp.g-sub-set .p-globalmenusp__trigger {
-  @include mq("md") {
-    display: block;
-    padding-block: rem(12);
-    font-size: rem(20);
-    font-weight: $bold;
-    color: $white;
-    letter-spacing: -0.03em;
+  &+.p-globalmenusp__item {
+    border-top: 1px solid #C6C6C6;
   }
 }
 
+nav.p-globalmenusp.g-sub-set .p-globalmenusp__trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: rem(16);
+  font-size: rem(14);
+  font-weight: $medium;
+  color: #3D0E01;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.p-globalmenusp__trigger_arrow {
+  flex-shrink: 0;
+  width: rem(12);
+
+  img {
+    aspect-ratio: 12/14;
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* CTAボタン */
 nav.p-globalmenusp.g-sub-set .p-globalmenusp__btn-wrap {
-  @include mq("md") {
-    margin-top: rem(38);
-    display: flex;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+}
+
+.p-globalmenusp__cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(12) rem(10);
+  background-color: $white;
+  border: 2px solid $theme;
+  border-radius: rem(4);
+  font-size: rem(13);
+  font-weight: $bold;
+  color: $theme;
+  line-height: 1.2;
+  transition: opacity 0.3s ease-out;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.p-globalmenusp__cta-icon {
+  flex-shrink: 0;
+  width: rem(15.5);
+
+  img {
+    aspect-ratio: 1;
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* フッターリンクエリア */
+.p-globalmenusp__footer {
+  display: flex;
+  flex-direction: column;
+  gap: rem(60);
+}
+
+.p-globalmenusp__footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+}
+
+/* サブナビ（2カラム） */
+.p-globalmenusp__subnav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(20);
+}
+
+.p-globalmenusp__subnav-item {
+  width: calc(50% - rem(10));
+}
+
+.p-globalmenusp__subnav-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: rem(7);
+  border-bottom: 1px solid #C6C6C6;
+  font-size: rem(14);
+  color: #3D0E01;
+  line-height: 1.2;
+  transition: opacity 0.3s ease-out;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.p-globalmenusp__subnav-icon {
+  width: rem(14);
+
+  img {
+    aspect-ratio: 1;
+    object-fit: contain;
+    height: auto;
+    width: 100%;
+  }
+}
+
+.p-globalmenusp__subnav-text {
+  flex: 1;
+  padding-right: rem(4);
+}
+
+/* お問い合わせリンク */
+.p-globalmenusp__contact {
+  display: flex;
+  flex-direction: column;
+  gap: rem(4);
+}
+
+.p-globalmenusp__contact-link {
+  font-size: rem(13);
+  font-weight: $regular;
+  color: #323232;
+  line-height: 1.8;
+  text-decoration: underline;
+  transition: opacity 0.3s ease-out;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+/* SNS */
+.p-globalmenusp__social {
+  display: flex;
+  align-items: center;
+  gap: rem(12);
+}
+
+.p-globalmenusp__social-label {
+  font-size: rem(13);
+  font-weight: $regular;
+  color: #323232;
+  line-height: 1.2;
+}
+
+.p-globalmenusp__social-icons {
+  display: flex;
+  gap: rem(13);
+}
+
+.p-globalmenusp__social-link {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.3s ease-out;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }

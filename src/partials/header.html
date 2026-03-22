@@ -83,49 +83,120 @@
     </header>
 
 
+    <!-- drawer overlay -->
+    <div class="p-drawer-overlay"></div>
+
     <!-- drawer -->
     <nav class="p-globalmenusp">
         <div class="p-globalmenusp__container">
+            <button class="p-globalmenusp__close">
+                <img src="/assets/img/icon_close.svg" alt="閉じる" loading="lazy" decoding="async" width="30" height="30">
+            </button>
             <a href="/" class="p-globalmenusp__logo">
-                <img src="/assets/img/logo_drawer01@2x.png" alt="フレイアクリニック メンズ医療脱毛のロゴ" loading="lazy" decoding="async" width="161" height="41">
+                <img src="/assets/img/logo01.svg" alt="menuのロゴ" loading="lazy" decoding="async" width="72" height="20">
             </a>
-            <ul class="p-globalmenusp__list">
-                <li class="p-globalmenusp__item">
-                    <a href="/guide.html" class="p-globalmenusp__trigger">
-                        <span class="p-globalmenusp__trigger_text">はじめての方へ</span>
+
+            <div class="p-globalmenusp__inner">
+                <!-- メインナビ -->
+                <ul class="p-globalmenusp__list">
+                    <li class="p-globalmenusp__item">
+                        <a href="/" class="p-globalmenusp__trigger">
+                            <span class="p-globalmenusp__trigger_text">TOP</span>
+                            <span class="p-globalmenusp__trigger_arrow"><img src="/assets/img/icon_arrow_green01.svg" alt="" loading="lazy" decoding="async" width="14" height="12"></span>
+                        </a>
+                    </li>
+                    <li class="p-globalmenusp__item">
+                        <a href="/coupon.html" class="p-globalmenusp__trigger">
+                            <span class="p-globalmenusp__trigger_text">クーポン&amp;キャンペーン情報</span>
+                            <span class="p-globalmenusp__trigger_arrow"><img src="/assets/img/icon_arrow_green01.svg" alt="" loading="lazy" decoding="async" width="14" height="12"></span>
+                        </a>
+                    </li>
+                    <li class="p-globalmenusp__item">
+                        <a href="/delivery-area.html" class="p-globalmenusp__trigger">
+                            <span class="p-globalmenusp__trigger_text">デリバリーエリア</span>
+                            <span class="p-globalmenusp__trigger_arrow"><img src="/assets/img/icon_arrow_green01.svg" alt="" loading="lazy" decoding="async" width="14" height="12"></span>
+                        </a>
+                    </li>
+                    <li class="p-globalmenusp__item">
+                        <a href="/payment.html" class="p-globalmenusp__trigger">
+                            <span class="p-globalmenusp__trigger_text">支払い方法</span>
+                            <span class="p-globalmenusp__trigger_arrow"><img src="/assets/img/icon_arrow_green01.svg" alt="" loading="lazy" decoding="async" width="14" height="12"></span>
+                        </a>
+                    </li>
+                    <li class="p-globalmenusp__item">
+                        <a href="/grocery.html" class="p-globalmenusp__trigger">
+                            <span class="p-globalmenusp__trigger_text">日用品・食料品(グロサリー)</span>
+                            <span class="p-globalmenusp__trigger_arrow"><img src="/assets/img/icon_arrow_green01.svg" alt="" loading="lazy" decoding="async" width="14" height="12"></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- CTAボタン -->
+                <div class="p-globalmenusp__btn-wrap">
+                    <a href="" class="p-globalmenusp__cta-btn" target="_blank" rel="noopener noreferrer">
+                        <span class="p-globalmenusp__cta-text">配達クルーにご興味のある方はこちら</span>
+                        <span class="p-globalmenusp__cta-icon">
+                            <img src="/assets/img/icon_link_green01.svg" alt="" loading="lazy" decoding="async" width="16" height="16">
+                        </span>
                     </a>
-                </li>
-                <li class="p-globalmenusp__item">
-                    <a href="/free-counseling.html" class="p-globalmenusp__trigger">
-                        <span class="p-globalmenusp__trigger_text">無料カウンセリングとは</span>
+                    <a href="" class="p-globalmenusp__cta-btn" target="_blank" rel="noopener noreferrer">
+                        <span class="p-globalmenusp__cta-text">menuへ出店をご検討の方はこちら</span>
+                        <span class="p-globalmenusp__cta-icon">
+                            <img src="/assets/img/icon_link_green01.svg" alt="" loading="lazy" decoding="async" width="16" height="16">
+                        </span>
                     </a>
-                </li>
-                <li class="p-globalmenusp__item">
-                    <a href="/menu.html" class="p-globalmenusp__trigger">
-                        <span class="p-globalmenusp__trigger_text">脱毛メニューと料金</span>
-                    </a>
-                </li>
-                <li class="p-globalmenusp__item">
-                    <a href="/machine.html" class="p-globalmenusp__trigger">
-                        <span class="p-globalmenusp__trigger_text">脱毛機紹介</span>
-                    </a>
-                </li>
-                <li class="p-globalmenusp__item">
-                    <a href="/faq.html" class="p-globalmenusp__trigger">
-                        <span class="p-globalmenusp__trigger_text">よくある質問</span>
-                    </a>
-                </li>
-                <li class="p-globalmenusp__item">
-                    <a href="/clinic.html" class="p-globalmenusp__trigger">
-                        <span class="p-globalmenusp__trigger_text">クリニック一覧</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="p-globalmenusp__btn-wrap">
-                <a href="" class="c-btn01">
-                    <span class="c-btn01__icon"></span>
-                    <span class="c-btn01__text">無料カウンセリング予約</span>
-                </a>
+                </div>
+
+                <!-- フッターリンク -->
+                <div class="p-globalmenusp__footer">
+                    <div class="p-globalmenusp__footer-inner">
+                        <!-- サブナビ（2カラム） -->
+                        <ul class="p-globalmenusp__subnav">
+                            <li class="p-globalmenusp__subnav-item">
+                                <a href="" class="p-globalmenusp__subnav-link" target="_blank" rel="noopener noreferrer">
+                                    <span class="p-globalmenusp__subnav-text">menu株式会社</span>
+                                    <span class="p-globalmenusp__subnav-icon">
+                                        <img src="/assets/img/icon_link_green01.svg" alt="" loading="lazy" decoding="async" width="16" height="16">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="p-globalmenusp__subnav-item">
+                                <a href="" class="p-globalmenusp__subnav-link" target="_blank" rel="noopener noreferrer">
+                                    <span class="p-globalmenusp__subnav-text">採用情報はこちら</span>
+                                    <span class="p-globalmenusp__subnav-icon">
+                                        <img src="/assets/img/icon_link_green01.svg" alt="" loading="lazy" decoding="async" width="16" height="16">
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="p-globalmenusp__subnav-item">
+                                <a href="" class="p-globalmenusp__subnav-link" target="_blank" rel="noopener noreferrer">
+                                    <span class="p-globalmenusp__subnav-text">新着情報</span>
+                                    <span class="p-globalmenusp__subnav-icon">
+                                        <img src="/assets/img/icon_link_green01.svg" alt="" loading="lazy" decoding="async" width="16" height="16">
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- お問い合わせリンク -->
+                        <div class="p-globalmenusp__contact">
+                            <a href="" class="p-globalmenusp__contact-link">配達員に関するお問い合わせ</a>
+                            <a href="" class="p-globalmenusp__contact-link">menuご利用に関するお問い合せ</a>
+                        </div>
+                    </div>
+
+                    <!-- SNS -->
+                    <div class="p-globalmenusp__social">
+                        <span class="p-globalmenusp__social-label">Follow us</span>
+                        <div class="p-globalmenusp__social-icons">
+                            <a href="" class="p-globalmenusp__social-link" target="_blank" rel="noopener noreferrer" aria-label="X(Twitter)">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15.27 2H18.04L11.9 9.01L19.12 18H13.44L9.02 12.19L3.97 18H1.19L7.75 10.51L0.83 2H6.64L10.65 7.31L15.27 2ZM14.29 16.36H15.82L5.73 3.58H4.08L14.29 16.36Z" fill="#323232" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>

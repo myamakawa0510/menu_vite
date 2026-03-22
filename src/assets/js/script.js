@@ -15,9 +15,9 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 // SPブレークポイント（md: 767px と一致）
 const SP_BREAKPOINT = 767;
 
-// 対策A: bfcache復帰時にドロワー状態をリセット（SP時のみ）
+// 対策A: bfcache復帰時にドロワー状態をリセット
 window.addEventListener("pageshow", function(event) {
-    if (event.persisted && window.innerWidth <= SP_BREAKPOINT) {
+    if (event.persisted) {
         const $ = window.jQuery;
         if ($) {
             $("body")
@@ -192,28 +192,16 @@ $(function() {
     }
 });
 
-// 対策F: g-sub-setをSP時のみ付与（ちらつき対策）
+// 対策F: g-sub-setを付与（ちらつき対策）
 function updateDrawerVisibility() {
     const $ = window.jQuery;
     if (!$) return;
 
-    const isSp = window.innerWidth <= SP_BREAKPOINT;
     const $drawer = $(".p-globalmenusp");
     const $hamburger = $(".p-hamburger");
 
-    if (isSp) {
-        $drawer.addClass("g-sub-set");
-        $hamburger.addClass("g-sub-set");
-    } else {
-        $drawer.removeClass("g-sub-set is-open");
-        $hamburger.removeClass("g-sub-set is-open");
-        $("body").removeClass("is-open").css({
-            position: "",
-            top: "",
-            width: ""
-        });
-        $(".p-header").removeClass("is-open");
-    }
+    $drawer.addClass("g-sub-set");
+    $hamburger.addClass("g-sub-set");
 }
 
 //ドロワー
@@ -258,6 +246,44 @@ jQuery(function($) {
             });
 
             // 保存したスクロール位置に戻す
+            window.scrollTo(0, scrollPosition);
+
+            $(".p-globalmenusp").removeClass("is-open");
+            $(".p-header").removeClass("is-open");
+        }
+    });
+
+    $(".p-drawer-overlay").on("click", function() {
+        if (isOpen) {
+            isOpen = false;
+
+            $(".p-hamburger").removeClass("is-open");
+
+            $("body").removeClass("is-open").css({
+                position: "",
+                top: "",
+                width: "",
+            });
+
+            window.scrollTo(0, scrollPosition);
+
+            $(".p-globalmenusp").removeClass("is-open");
+            $(".p-header").removeClass("is-open");
+        }
+    });
+
+    $(".p-globalmenusp__close").on("click", function() {
+        if (isOpen) {
+            isOpen = false;
+
+            $(".p-hamburger").removeClass("is-open");
+
+            $("body").removeClass("is-open").css({
+                position: "",
+                top: "",
+                width: "",
+            });
+
             window.scrollTo(0, scrollPosition);
 
             $(".p-globalmenusp").removeClass("is-open");

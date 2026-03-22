@@ -101,6 +101,10 @@
   background: #3d0e01;
 }
 
+.p-faq__item[open] .p-faq__trigger-icon_line_h {
+  background: #3d0e01;
+}
+
 .p-faq__content {
   overflow: hidden;
   padding-bottom: rem(16);
